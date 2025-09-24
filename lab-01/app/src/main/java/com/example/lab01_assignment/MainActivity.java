@@ -24,6 +24,17 @@ public class MainActivity extends AppCompatActivity {
         exercises.add(new Bai2());
         exercises.add(new Bai3());
         exercises.add(new Bai4());
+        exercises.add(new Bai5());
+        exercises.add(new Bai6());
+        exercises.add(new Bai7());
+        exercises.add(new Bai8());
+        exercises.add(new Bai9());
+        exercises.add(new Bai10());
+        exercises.add(new Bai11());
+        exercises.add(new Bai12());
+        exercises.add(new Bai13());
+        exercises.add(new Bai14());
+        exercises.add(new Bai15());
 
         // Lấy danh sách tiêu đề bài
         List<String> titles = new ArrayList<>();
