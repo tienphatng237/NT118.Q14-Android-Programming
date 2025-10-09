@@ -21,6 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Activity phụ cho Linear Layout -->
+        <activity
+            android:name=".LinearLayoutActivity"
+            android:exported="false"
+            android:label="LinearLayout Demo" />
     </application>
 
 </manifest>
