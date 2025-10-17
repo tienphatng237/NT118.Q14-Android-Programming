@@ -1,7 +1,13 @@
 <resources>
-    <color name="colorPrimary">#3A7CA5</color>
-    <color name="colorAccent">#5FB3BD</color>
-    <color name="colorBackground">#F3F8FB</color>
-    <color name="colorTextPrimary">#1B1F3B</color>
-    <color name="colorButtonCancel">#A8C5DB</color>
+    <!-- Primary cold blue theme -->
+    <color name="colorPrimary">#1976D2</color>
+    <color name="colorPrimaryDark">#0D47A1</color>
+    <color name="colorAccent">#2196F3</color>
+
+    <!-- UI background and text -->
+    <color name="colorBackground">#F5F9FF</color>
+    <color name="colorSurface">#E3F2FD</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTextPrimary">#0D47A1</color>
+    <color name="colorTextSecondary">#546E7A</color>
 </resources>

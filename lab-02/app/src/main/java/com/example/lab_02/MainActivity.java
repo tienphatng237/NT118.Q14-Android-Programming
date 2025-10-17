@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.lab_02.menu.LinearMenuActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,29 +15,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnLinear = findViewById(R.id.btnLinear);
-        Button btnLandscape = findViewById(R.id.btnLandscape);
-        Button btnSales = findViewById(R.id.btnSales);
-        Button btnCalc = findViewById(R.id.btnCalc);
-
-        // Chuyển qua LinearLayoutActivity
-        btnLinear.setOnClickListener(v ->
-                startActivity(new Intent(this, LinearLayoutActivity.class))
-        );
-
-//        // Chuyển qua LandscapeActivity
-//        btnLandscape.setOnClickListener(v ->
-//                startActivity(new Intent(this, LandscapeActivity.class))
-//        );
-//
-//        // Chuyển qua SalesManagerActivity
-//        btnSales.setOnClickListener(v ->
-//                startActivity(new Intent(this, SalesManagerActivity.class))
-//        );
-//
-//        // Chuyển qua CalculatorActivity
-//        btnCalc.setOnClickListener(v ->
-//                startActivity(new Intent(this, CalculatorActivity.class))
-//        );
+        Button btnLinear = findViewById(R.id.btn_linear_demo);
+        btnLinear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LinearMenuActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

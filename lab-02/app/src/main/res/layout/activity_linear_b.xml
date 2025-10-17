@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:padding="2dp">
+
+    <!-- Hàng 1: View màu đỏ -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#F44336"
+        android:foreground="@drawable/common_border"
+        android:text="1"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:gravity="center" />
+
+    <!-- Hàng 2: gồm cột trái (vàng) và cột phải (xanh dương, hồng, tím) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal">
+
+        <!-- Cột trái màu vàng -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFEB3B"
+            android:foreground="@drawable/common_border"
+            android:text="2"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:gravity="center" />
+
+        <!-- Cột phải gồm 3 khối: xanh dương, hồng, tím -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <!-- Khối màu xanh dương -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="#2196F3"
+                android:foreground="@drawable/common_border"
+                android:text="3"
+                android:textColor="@android:color/white"
+                android:textSize="36sp"
+                android:gravity="center" />
+
+            <!-- Hàng cuối gồm khối hồng và tím -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#F8BBD0"
+                    android:foreground="@drawable/common_border"
+                    android:text="4"
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#9C27B0"
+                    android:foreground="@drawable/common_border"
+                    android:text="5"
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -12,21 +12,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab02"
         tools:targetApi="31">
+
+        <!-- Activity khởi động chính -->
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.lab_02.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- Activity phụ cho Linear Layout -->
+        <!-- Bài 1: Linear Layout -->
         <activity
-            android:name=".LinearLayoutActivity"
+            android:name=".menu.LinearMenuActivity"
             android:exported="false"
-            android:label="LinearLayout Demo" />
+            android:label="Linear Layout Menu" />
+
+        <activity
+            android:name=".linear.LinearAVerticalActivity"
+            android:exported="false"
+            android:label="Linear A - Vertical" />
+
+        <activity
+            android:name=".linear.LinearBHorizontalActivity"
+            android:exported="false"
+            android:label="Linear B - Horizontal" />
+
     </application>
 
 </manifest>
