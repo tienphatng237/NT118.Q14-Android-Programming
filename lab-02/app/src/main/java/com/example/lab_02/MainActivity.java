@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.lab_02.menu.LinearMenuActivity;
 import com.example.lab_02.menu.LandscapeMenuActivity;
+import com.example.lab_02.menu.SalesMenuActivity;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -17,11 +18,15 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnLinear = findViewById(R.id.btn_linear_demo);
         Button btnLandscape = findViewById(R.id.btn_landscape_demo);
+        Button btnSales = findViewById(R.id.btn_sales_demo);
 
         btnLinear.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, LinearMenuActivity.class)));
 
         btnLandscape.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, LandscapeMenuActivity.class)));
+
+        btnSales.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, SalesMenuActivity.class)));
     }
 }

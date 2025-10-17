@@ -52,6 +52,14 @@
             android:exported="false"
             android:screenOrientation="unspecified"
             android:label="Personal Info" />
+
+        <!-- Bài 3: Quản lý bán hàng -->
+        <activity
+            android:name=".menu.SalesMenuActivity"
+            android:exported="false"
+            android:label="Sales Menu" />
+
+
     </application>
 
 </manifest>
