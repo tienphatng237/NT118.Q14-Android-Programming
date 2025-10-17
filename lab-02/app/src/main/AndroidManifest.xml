@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Lab02"
         tools:targetApi="31">
 
-        <!-- Activity khởi động chính -->
+        <!-- Activity chính -->
         <activity
             android:name="com.example.lab_02.MainActivity"
             android:exported="true">
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
 
-        <!-- Bài 1: Linear Layout -->
+        <!-- Bài 1 -->
         <activity
             android:name=".menu.LinearMenuActivity"
             android:exported="false"
@@ -39,6 +39,19 @@
             android:exported="false"
             android:label="Linear B - Horizontal" />
 
+        <!-- Bài 2: Layout nằm ngang -->
+        <activity
+            android:name=".menu.LandscapeMenuActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified"
+            android:label="Landscape Layout Menu" />
+
+        <!-- Màn hình nhập thông tin cá nhân -->
+        <activity
+            android:name=".personal.PersonalInfoActivity"
+            android:exported="false"
+            android:screenOrientation="unspecified"
+            android:label="Personal Info" />
     </application>
 
 </manifest>
