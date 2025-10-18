@@ -1,4 +1,4 @@
-package com.example.lab_02.calculator;
+package com.example.lab_02.bai04_Calculator;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -16,7 +16,7 @@ public class CalculatorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calculator);
+        setContentView(R.layout.bai04_activity_calculator);
         setTitle("Máy tính cơ bản");
 
         tvExpression = findViewById(R.id.tvExpression);

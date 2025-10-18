@@ -30,12 +30,12 @@
             android:label="Linear Layout Menu" />
 
         <activity
-            android:name=".linear.LinearAVerticalActivity"
+            android:name=".bai01_LinearLayout.LinearLayoutA"
             android:exported="false"
             android:label="Linear A - Vertical" />
 
         <activity
-            android:name=".linear.LinearBHorizontalActivity"
+            android:name=".bai01_LinearLayout.LinearLayoutB"
             android:exported="false"
             android:label="Linear B - Horizontal" />
 
@@ -48,20 +48,20 @@
 
         <!-- Màn hình nhập thông tin cá nhân -->
         <activity
-            android:name=".personal.PersonalInfoActivity"
+            android:name=".bai02_PersonalInfo.PersonalInfoActivity"
             android:exported="false"
             android:screenOrientation="unspecified"
             android:label="Personal Info" />
 
         <!-- Bài 3: Quản lý bán hàng -->
         <activity
-            android:name=".menu.SalesMenuActivity"
+            android:name=".bai03_SalesManager.SalesManagerActivity"
             android:exported="false"
             android:label="Sales Menu" />
 
         <!-- Bài 4: Máy tính bỏ túi -->
         <activity
-            android:name=".calculator.CalculatorActivity"
+            android:name=".bai04_Calculator.CalculatorActivity"
             android:exported="false"
             android:label="Máy tính cơ bản" />
     </application>

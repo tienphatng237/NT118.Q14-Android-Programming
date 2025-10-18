@@ -7,9 +7,9 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.lab_02.menu.LinearMenuActivity;
-import com.example.lab_02.menu.LandscapeMenuActivity;
-import com.example.lab_02.menu.SalesMenuActivity;
-import com.example.lab_02.calculator.CalculatorActivity;
+import com.example.lab_02.bai02_PersonalInfo.PersonalInfoActivity;
+import com.example.lab_02.bai03_SalesManager.SalesManagerActivity;
+import com.example.lab_02.bai04_Calculator.CalculatorActivity;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -26,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, LinearMenuActivity.class)));
 
         btnLandscape.setOnClickListener(v ->
-                startActivity(new Intent(MainActivity.this, LandscapeMenuActivity.class)));
+                startActivity(new Intent(MainActivity.this, PersonalInfoActivity.class)));
 
         btnSales.setOnClickListener(v ->
-                startActivity(new Intent(MainActivity.this, SalesMenuActivity.class)));
+                startActivity(new Intent(MainActivity.this, SalesManagerActivity.class)));
         btnCalc.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, CalculatorActivity.class)));
 

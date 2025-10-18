@@ -1,6 +1,5 @@
-package com.example.lab_02.sales;
+package com.example.lab_02.bai03_SalesManager;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +9,7 @@ public class SalesManagerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sales_manager);
+        setContentView(R.layout.bai03_activity_sales_manager);
         setTitle("Quản lý bán hàng");
 
         Button btnExit = findViewById(R.id.btnExit);

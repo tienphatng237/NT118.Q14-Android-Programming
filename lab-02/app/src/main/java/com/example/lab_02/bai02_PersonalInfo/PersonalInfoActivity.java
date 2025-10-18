@@ -1,4 +1,4 @@
-package com.example.lab_02.personal;
+package com.example.lab_02.bai02_PersonalInfo;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ public class PersonalInfoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_personal_info);
+        setContentView(R.layout.bai02_activity_personal_info);
         setTitle("Cập nhật thông tin cá nhân");
 
         // Cho phép tự xoay khi vào màn hình này
