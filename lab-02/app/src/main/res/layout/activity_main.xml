@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- 🔹 Tiêu đề -->
+        <!-- Tiêu đề -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
             android:layout_marginBottom="36dp"
             android:gravity="center" />
 
-        <!-- 🔸 Nút Bài 1 -->
+        <!-- Nút Bài 1 -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_linear_demo"
             android:layout_width="match_parent"
@@ -48,7 +48,7 @@
             android:paddingVertical="14dp"
             android:layout_marginBottom="20dp" />
 
-        <!-- 🔸 Nút Bài 2 -->
+        <!-- Nút Bài 2 -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_landscape_demo"
             android:layout_width="match_parent"
@@ -66,7 +66,7 @@
             android:paddingVertical="14dp"
             android:layout_marginBottom="20dp" />
 
-        <!-- 🔸 Nút Bài 3 -->
+        <!-- Nút Bài 3 -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_sales_demo"
             android:layout_width="match_parent"
@@ -84,7 +84,7 @@
             android:paddingVertical="14dp"
             android:layout_marginBottom="20dp" />
 
-        <!-- 🔸 Nút Bài 4 -->
+        <!-- Nút Bài 4 -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_calculator"
             android:layout_width="match_parent"
