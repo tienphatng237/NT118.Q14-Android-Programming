@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 🎨 Theme tổng thể -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">#F8F9FA</item>
+        <item name="android:statusBarColor">#1565C0</item>
+        <item name="android:navigationBarColor">#1565C0</item>
+    </style>
+
+    <!-- 🔹 Style cho phím số -->
+    <style name="CalcButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@drawable/bg_button_num</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <!-- 🟩 Alias để tương thích (nếu layout dùng CalcButtonNum) -->
+    <style name="CalcButtonNum" parent="CalcButton" />
+
+    <!-- 🟨 Style cho phím phép toán -->
+    <style name="CalcButtonOp" parent="CalcButton">
+        <item name="android:textColor">#1565C0</item>
+        <item name="android:background">@drawable/bg_button_op</item>
+    </style>
+
+    <!-- 🟧 Style cho phím "=" -->
+    <style name="CalcButtonEqual">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/bg_button_equal</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+</resources>

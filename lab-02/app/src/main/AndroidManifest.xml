@@ -59,7 +59,11 @@
             android:exported="false"
             android:label="Sales Menu" />
 
-
+        <!-- Bài 4: Máy tính bỏ túi -->
+        <activity
+            android:name=".calculator.CalculatorActivity"
+            android:exported="false"
+            android:label="Máy tính cơ bản" />
     </application>
 
 </manifest>

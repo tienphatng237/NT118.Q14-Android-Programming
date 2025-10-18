@@ -1,3 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">lab-02</string>
+
+    <!-- Thông tin ứng dụng -->
+    <string name="app_name">Lab 02 Calculator</string>
+
+    <!-- Tiêu đề -->
+    <string name="title_basic_calculator">MÁY TÍNH CƠ BẢN</string>
+
+    <!-- Các số -->
+    <string name="d0">0</string>
+    <string name="d1">1</string>
+    <string name="d2">2</string>
+    <string name="d3">3</string>
+    <string name="d4">4</string>
+    <string name="d5">5</string>
+    <string name="d6">6</string>
+    <string name="d7">7</string>
+    <string name="d8">8</string>
+    <string name="d9">9</string>
+
+    <!-- Các toán tử -->
+    <string name="op_add">+</string>
+    <string name="op_sub">-</string>
+    <string name="op_mul">×</string>
+    <string name="op_div">/</string>
+    <string name="op_equal">=</string>
+    <string name="op_clear">C</string>
+
+    <!-- Dấu chấm -->
+    <string name="dot">.</string>
+
+    <!-- Gợi ý & thông báo -->
+    <string name="hint_expression">Nhập biểu thức...</string>
+    <string name="hint_result">Kết quả sẽ hiển thị tại đây</string>
+    <string name="error_invalid_expression">Biểu thức không hợp lệ</string>
+
+    <!-- Các mô tả phụ (dành cho accessibility hoặc test UI) -->
+    <string name="desc_button_add">Phép cộng</string>
+    <string name="desc_button_sub">Phép trừ</string>
+    <string name="desc_button_mul">Phép nhân</string>
+    <string name="desc_button_div">Phép chia</string>
+    <string name="desc_button_clear">Xóa toàn bộ</string>
+    <string name="desc_button_equal">Tính kết quả</string>
+
 </resources>

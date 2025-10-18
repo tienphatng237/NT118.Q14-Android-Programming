@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:padding="10dp"
+    android:fitsSystemWindows="true">
+
+    <!-- PANEL TRÁI (Display) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDisplay"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="8dp"
+        android:radius="14dp"
+        android:elevation="6dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cardButtons"
+        app:layout_constraintWidth_percent="0.40">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MÁY TÍNH CƠ BẢN"
+                android:gravity="center"
+                android:background="#1565C0"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvExpression"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="end|bottom"
+                android:textColor="#212121"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:background="@drawable/bg_input_field"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#1565C0"
+                android:textStyle="bold"
+                android:textSize="26sp"
+                android:gravity="end"
+                android:padding="10dp"
+                android:background="@drawable/bg_input_field"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- PANEL PHẢI (Buttons) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardButtons"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:radius="14dp"
+        android:elevation="6dp"
+        android:backgroundTint="#FFFFFF"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/cardDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.58">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:gravity="center">
+
+            <!-- GRID 4x4 -->
+            <GridLayout
+                android:id="@+id/gridButtons"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:columnCount="4"
+                android:rowCount="4"
+                android:useDefaultMargins="true"
+                android:alignmentMode="alignMargins"
+                android:padding="4dp">
+
+                <!-- Hàng 1 -->
+                <Button android:id="@+id/btn7" style="@style/CalcButtonNum" android:text="7" android:layout_height="54dp"/>
+                <Button android:id="@+id/btn8" style="@style/CalcButtonNum" android:text="8" android:layout_height="54dp"/>
+                <Button android:id="@+id/btn9" style="@style/CalcButtonNum" android:text="9" android:layout_height="54dp"/>
+                <Button android:id="@+id/btnDiv" style="@style/CalcButtonOp" android:text="/" android:layout_height="54dp"/>
+
+                <!-- Hàng 2 -->
+                <Button android:id="@+id/btn4" style="@style/CalcButtonNum" android:text="4" android:layout_height="54dp"/>
+                <Button android:id="@+id/btn5" style="@style/CalcButtonNum" android:text="5" android:layout_height="54dp"/>
+                <Button android:id="@+id/btn6" style="@style/CalcButtonNum" android:text="6" android:layout_height="54dp"/>
+                <Button android:id="@+id/btnMul" style="@style/CalcButtonOp" android:text="×" android:layout_height="54dp"/>
+
+                <!-- Hàng 3 -->
+                <Button android:id="@+id/btn1" style="@style/CalcButtonNum" android:text="1" android:layout_height="54dp"/>
+                <Button android:id="@+id/btn2" style="@style/CalcButtonNum" android:text="2" android:layout_height="54dp"/>
+                <Button android:id="@+id/btn3" style="@style/CalcButtonNum" android:text="3" android:layout_height="54dp"/>
+                <Button android:id="@+id/btnSub" style="@style/CalcButtonOp" android:text="-" android:layout_height="54dp"/>
+
+                <!-- Hàng 4 -->
+                <Button android:id="@+id/btn0" style="@style/CalcButtonNum" android:text="0" android:layout_height="54dp"/>
+                <Button android:id="@+id/btnDot" style="@style/CalcButtonNum" android:text="." android:layout_height="54dp"/>
+                <Button android:id="@+id/btnClear" style="@style/CalcButtonOp" android:text="AC" android:layout_height="54dp"/>
+                <Button android:id="@+id/btnAdd" style="@style/CalcButtonOp" android:text="+" android:layout_height="54dp"/>
+            </GridLayout>
+
+            <!-- Nút "=" -->
+            <Button
+                android:id="@+id/btnEqual"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="="
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@drawable/bg_button_equal"
+                android:elevation="4dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="4dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

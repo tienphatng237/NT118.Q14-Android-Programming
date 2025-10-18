@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.lab_02.menu.LinearMenuActivity;
 import com.example.lab_02.menu.LandscapeMenuActivity;
 import com.example.lab_02.menu.SalesMenuActivity;
+import com.example.lab_02.calculator.CalculatorActivity;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnLinear = findViewById(R.id.btn_linear_demo);
         Button btnLandscape = findViewById(R.id.btn_landscape_demo);
         Button btnSales = findViewById(R.id.btn_sales_demo);
+        Button btnCalc = findViewById(R.id.btn_calculator);
 
         btnLinear.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, LinearMenuActivity.class)));
@@ -28,5 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
         btnSales.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, SalesMenuActivity.class)));
+        btnCalc.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, CalculatorActivity.class)));
+
     }
 }

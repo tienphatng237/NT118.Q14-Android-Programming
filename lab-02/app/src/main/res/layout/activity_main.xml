@@ -1,49 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="@color/colorBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="32dp">
+    android:background="@color/colorBackground">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lab 02 – Layout Exercises"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="32dp"
-        android:layout_gravity="center" />
-
-    <!-- Nút Bài 1 -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_linear_demo"
+    <LinearLayout
+        android:id="@+id/containerMain"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="1️⃣ LINEAR LAYOUT DEMO"
-        android:textColor="@android:color/white"
-        android:textAllCaps="false"
-        android:fontFamily="sans-serif-medium"
-        android:elevation="6dp"
-        android:paddingVertical="14dp"
-        android:layout_marginBottom="20dp" />
+        android:paddingHorizontal="28dp"
+        android:paddingVertical="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <!-- Nút Bài 2 -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_landscape_demo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="2️⃣ PERSONAL INFO (LANDSCAPE)"
-        android:textColor="@android:color/white"
-        android:textAllCaps="false"
-        android:fontFamily="sans-serif-medium"
-        android:elevation="6dp"
-        android:paddingVertical="14dp"
-        android:layout_marginBottom="20dp" />
+        <!-- 🔹 Tiêu đề -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lab 02 – Layout Exercises"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="36dp"
+            android:gravity="center" />
 
-</LinearLayout>
+        <!-- 🔸 Nút Bài 1 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_linear_demo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Bài 1 - Linear Layout Demo"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:elevation="5dp"
+            app:cornerRadius="10dp"
+            android:paddingStart="32dp"
+            android:paddingVertical="14dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- 🔸 Nút Bài 2 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_landscape_demo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Bài 2 - Cập nhật thông tin cá nhân"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:elevation="5dp"
+            app:cornerRadius="10dp"
+            android:paddingStart="32dp"
+            android:paddingVertical="14dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- 🔸 Nút Bài 3 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_sales_demo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Bài 3 - Quản lý bán hàng"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:elevation="5dp"
+            app:cornerRadius="10dp"
+            android:paddingStart="32dp"
+            android:paddingVertical="14dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- 🔸 Nút Bài 4 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Bài 4 - Máy tính bỏ túi"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="16sp"
+            android:elevation="5dp"
+            app:cornerRadius="10dp"
+            android:paddingStart="32dp"
+            android:paddingVertical="14dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
