@@ -15,5 +15,5 @@ import org.junit.runners.Suite;
         CalculatorToggleSignTest.class
 })
 public class CalculatorTestSuite {
-    // Không cần viết gì thêm, chỉ dùng để gom nhóm test
+    // Không viết gì thêm, chỉ dùng để gom nhóm test
 }

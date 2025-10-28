@@ -32,20 +32,20 @@ public class CalculatorCore {
             return;
         }
 
-        // 1️⃣ Nếu kết thúc bằng "(-" → toggle off (xóa đi)
+        // 1. Nếu kết thúc bằng "(-" → toggle off (xóa đi)
         if (endsWithOpenNeg()) {
             expr.delete(expr.length()-2, expr.length());
             return;
         }
 
-        // 2️⃣ Nếu ký tự cuối là toán tử hoặc '(' → mở ngoặc âm "(-"
+        // 2. Nếu ký tự cuối là toán tử hoặc '(' → mở ngoặc âm "(-"
         char last = last();
         if (isOperator(last) || last == '(') {
             expr.append("(-");
             return;
         }
 
-        // 3️⃣ Ngược lại: đã có toán hạng cuối → toggle bọc âm quanh nó
+        // 3. Ngược lại: đã có toán hạng cuối → toggle bọc âm quanh nó
         int[] span = findLastOperandSpan(expr.toString());
         if (span[0] == -1) {
             expr.append("(-");

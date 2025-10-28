@@ -53,7 +53,7 @@ public class CalculatorActivity extends AppCompatActivity {
         findViewById(R.id.btnClear).setOnClickListener(v -> {
             calc.clear();
             updateExpression();
-            tvResult.setText("");
+            tvResult.setText("0");
         });
 
         /* ==================== NÚT +/- (ĐẢO DẤU) ==================== */

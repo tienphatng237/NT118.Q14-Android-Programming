@@ -37,9 +37,18 @@
             android:elevation="3dp"
             android:clipToOutline="true">
 
+            <!-- Nhãn: Họ tên -->
+            <TextView
+                android:text="Họ tên"
+                android:textStyle="bold"
+                android:textColor="#1976D2"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
             <EditText
                 android:id="@+id/etName"
-                android:hint="Họ tên"
+                android:hint="Nhập họ tên..."
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -47,9 +56,18 @@
                 android:backgroundTint="#1E88E5"
                 android:textColorHint="#5A5A5A"/>
 
+            <!-- Nhãn: CMND -->
+            <TextView
+                android:text="CMND"
+                android:textStyle="bold"
+                android:textColor="#1976D2"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
             <EditText
                 android:id="@+id/etCMND"
-                android:hint="CMND (9 chữ số)"
+                android:hint="Nhập CMND (9 chữ số)"
                 android:inputType="number"
                 android:maxLength="9"
                 android:layout_width="match_parent"
@@ -57,6 +75,15 @@
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="#1E88E5"
                 android:textColorHint="#5A5A5A"/>
+
+            <!-- Nhãn: Bằng cấp -->
+            <TextView
+                android:text="Bằng cấp"
+                android:textStyle="bold"
+                android:textColor="#1976D2"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <Spinner
                 android:id="@+id/spDegree"
@@ -66,6 +93,7 @@
                 android:layout_marginBottom="10dp"
                 android:popupBackground="#FFFFFF"/>
 
+            <!-- Nhãn: Sở thích -->
             <TextView
                 android:text="Sở thích"
                 android:textStyle="bold"
@@ -105,15 +133,25 @@
                     android:textColor="#333333"/>
             </LinearLayout>
 
+            <!-- Nhãn: Thông tin bổ sung -->
+            <TextView
+                android:text="Thông tin bổ sung"
+                android:textStyle="bold"
+                android:textColor="#1976D2"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
             <EditText
                 android:id="@+id/etExtra"
-                android:hint="Thông tin bổ sung (tùy chọn)"
+                android:hint="Nhập thông tin bổ sung (tùy chọn)"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:backgroundTint="#1E88E5"
                 android:textColorHint="#5A5A5A"/>
 
+            <!-- Nút gửi -->
             <Button
                 android:id="@+id/btnSend"
                 android:text="GỬI THÔNG TIN"
@@ -124,6 +162,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"/>
 
+            <!-- Nút quay về -->
             <Button
                 android:id="@+id/btnBack"
                 android:text="QUAY VỀ MÀN CHÍNH"
@@ -136,6 +175,5 @@
                 android:layout_marginBottom="10dp" />
 
         </LinearLayout>
-
     </LinearLayout>
 </ScrollView>
