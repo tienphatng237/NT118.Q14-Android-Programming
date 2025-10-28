@@ -1,0 +1,42 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Lab03"
+        tools:targetApi="31">
+
+        <!-- Màn hình chính -->
+        <activity
+            android:name="com.example.lab_03.main_menu.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Bài 1: Gửi & Hiển thị thông tin -->
+        <activity
+            android:name=".bai01_SendInformation.SendInfoActivity"
+            android:exported="false"
+            android:label="Gửi thông tin" />
+        <activity
+            android:name=".bai01_SendInformation.DisplayInfoActivity"
+            android:exported="false"
+            android:label="Hiển thị thông tin" />
+
+        <!-- Bài 2: Máy tính -->
+        <activity
+            android:name=".bai02_Calculator.CalculatorActivity"
+            android:exported="false"
+            android:label="Máy tính cơ bản" />
+
+    </application>
+</manifest>

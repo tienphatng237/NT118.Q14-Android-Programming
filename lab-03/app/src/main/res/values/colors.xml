@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary palette -->
+    <color name="colorPrimary">#1E88E5</color>        <!-- Xanh lam UIT -->
+    <color name="colorPrimaryDark">#1565C0</color>
+    <color name="colorAccent">#42A5F5</color>
+
+    <!-- Backgrounds -->
+    <color name="background_light">#F5F7FA</color>
+    <color name="background_dark">#121212</color>
+
+    <!-- Text colors -->
+    <color name="text_primary_light">#212121</color>
+    <color name="text_secondary_light">#757575</color>
+    <color name="text_primary_dark">#FFFFFF</color>
+
+    <!-- Buttons -->
+    <color name="button_blue">#1E88E5</color>
+    <color name="button_blue_pressed">#1565C0</color>
+
+    <!-- Card -->
+    <color name="card_bg">#FFFFFF</color>
+    <color name="card_border">#DDDDDD</color>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="degrees">
+        <item>Trung cấp</item>
+        <item>Cao đẳng</item>
+        <item>Đại học</item>
+        <item>Thạc sĩ</item>
+        <item>Tiến sĩ</item>
+    </string-array>
+</resources>

@@ -1,0 +1,67 @@
+<resources>
+
+    <!-- Theme tổng thể -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">#F3F6FA</item>
+        <item name="android:statusBarColor">#1565C0</item>
+        <item name="android:navigationBarColor">#1565C0</item>
+    </style>
+
+    <!-- Base style cho tất cả button -->
+    <style name="CalcButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Phím số: TRẮNG + chữ xanh, KHÔNG bị tint -->
+    <style name="CalcButtonNum" parent="CalcButton">
+        <item name="android:textColor">#1565C0</item>
+        <item name="android:background">@drawable/bg_button_num</item>
+        <!-- NGẮT tint từ theme/AppCompat -->
+        <item name="android:backgroundTint">@null</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:elevation">3dp</item>
+    </style>
+
+    <!-- Phép toán: xanh đậm + chữ trắng (không cần, nhưng ngắt tint cho chắc) -->
+    <style name="CalcButtonOp" parent="CalcButton">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/bg_button_op</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
+    <!-- Nút "=" -->
+    <style name="CalcButtonEqual">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/bg_button_equal</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CalcButtonFunc">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:backgroundTint">#BBDEFB</item>
+        <item name="android:textColor">#0D47A1</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:elevation">3dp</item>
+    </style>
+
+</resources>

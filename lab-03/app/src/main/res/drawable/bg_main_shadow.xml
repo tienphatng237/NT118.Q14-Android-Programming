@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Bóng đổ nhẹ -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#DDE3F2FD"
+                android:centerColor="#F3F6FA"
+                android:endColor="#FFFFFFFF"
+                android:angle="270" />
+        </shape>
+    </item>
+
+    <!-- Lớp nền chính -->
+    <item android:left="0dp" android:top="0dp" android:right="0dp" android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#F3F6FA"/>
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#F4F8FB"
+    android:padding="20dp"
+    tools:context=".bai01_SendInformation.SendInfoActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="Nhập thông tin cá nhân"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Card chứa form -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="3dp"
+            android:clipToOutline="true">
+
+            <EditText
+                android:id="@+id/etName"
+                android:hint="Họ tên"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:inputType="textPersonName"
+                android:backgroundTint="#1E88E5"
+                android:textColorHint="#5A5A5A"/>
+
+            <EditText
+                android:id="@+id/etCMND"
+                android:hint="CMND (9 chữ số)"
+                android:inputType="number"
+                android:maxLength="9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#1E88E5"
+                android:textColorHint="#5A5A5A"/>
+
+            <Spinner
+                android:id="@+id/spDegree"
+                android:entries="@array/degrees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:popupBackground="#FFFFFF"/>
+
+            <TextView
+                android:text="Sở thích"
+                android:textStyle="bold"
+                android:textColor="#1976D2"
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <CheckBox
+                    android:id="@+id/cbSport"
+                    android:text="Thể thao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#1E88E5"
+                    android:textColor="#333333"/>
+
+                <CheckBox
+                    android:id="@+id/cbMusic"
+                    android:text="Âm nhạc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#1E88E5"
+                    android:textColor="#333333"/>
+
+                <CheckBox
+                    android:id="@+id/cbReading"
+                    android:text="Đọc sách"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#1E88E5"
+                    android:textColor="#333333"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etExtra"
+                android:hint="Thông tin bổ sung (tùy chọn)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#1E88E5"
+                android:textColorHint="#5A5A5A"/>
+
+            <Button
+                android:id="@+id/btnSend"
+                android:text="GỬI THÔNG TIN"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#1E88E5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/btnBack"
+                android:text="QUAY VỀ MÀN CHÍNH"
+                android:textAllCaps="false"
+                android:textColor="#1E88E5"
+                android:backgroundTint="#E3F2FD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
