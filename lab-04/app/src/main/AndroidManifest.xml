@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:label="Lab 04 Storage"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Theme.PersonalTaskManager">
+
+        <!-- ENTRY POINT -->
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- ===================== -->
+        <!-- Task 01 Activities    -->
+        <!-- ===================== -->
+
+        <!-- Splash -->
+        <activity
+            android:name=".task01.screens.Task01SplashActivity"
+            android:exported="false" />
+
+        <!-- Login -->
+        <activity
+            android:name=".task01.screens.Task01LoginActivity"
+            android:exported="false" />
+
+        <!-- Register -->
+        <activity
+            android:name=".task01.screens.Task01RegisterActivity"
+            android:exported="false" />
+
+        <!-- Main -->
+        <activity
+            android:name=".task01.screens.Task01MainActivity"
+            android:exported="false" />
+
+        <!-- Profile -->
+        <activity
+            android:name=".task01.screens.Task01ProfileActivity"
+            android:exported="false" />
+
+        <!-- Admin Dashboard -->
+        <activity
+            android:name=".task01.screens.Task01AdminActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
