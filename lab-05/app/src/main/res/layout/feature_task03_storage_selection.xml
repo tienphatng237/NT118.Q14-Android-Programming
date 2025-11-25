@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@color/colorBackground"
+    tools:context=".task03.screens.Task03StorageSelectionActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHỌN PHƯƠNG THỨC LƯU TRỮ (TASK 3)"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_select_internal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. INTERNAL STORAGE (Nội bộ)"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorOnPrimary"
+        android:padding="16dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btn_select_external"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. EXTERNAL STORAGE (Bộ nhớ ngoài)"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorOnPrimary"
+        android:padding="16dp"/>
+
+</LinearLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/colorBackground"
+    android:fitsSystemWindows="true"
+    tools:context=".task04.screens.Task04ClassManagerActivity">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quản Lý Lớp Học"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/edtClassCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mã lớp"
+        android:inputType="text"
+        android:layout_marginBottom="8dp"
+        android:padding="12dp"
+        android:background="@color/backgroundLight"
+        android:elevation="1dp"/>
+
+    <EditText
+        android:id="@+id/edtClassName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên lớp"
+        android:inputType="text"
+        android:layout_marginBottom="8dp"
+        android:padding="12dp"
+        android:background="@color/backgroundLight"
+        android:elevation="1dp"/>
+
+    <EditText
+        android:id="@+id/edtStudentCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sĩ số"
+        android:inputType="number"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:background="@color/backgroundLight"
+        android:elevation="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnInsert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Thêm"
+            android:backgroundTint="@color/teal_600"
+            android:textColor="@color/colorOnPrimary"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cập nhật"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/colorOnPrimary"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Xoá"
+            android:backgroundTint="@color/red"
+            android:textColor="@color/colorOnPrimary"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="#E0E0E0"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="Mã Lớp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary"
+            android:textSize="12sp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:text="Tên Lớp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary"
+            android:textSize="12sp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:text="Sĩ Số"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary"
+            android:textSize="12sp"
+            android:gravity="end"
+            android:layout_marginEnd="12dp"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:paddingTop="8dp"/>
+
+    <Button
+        android:id="@+id/btn_internal_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quay lại"
+        android:backgroundTint="@color/gray_500"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

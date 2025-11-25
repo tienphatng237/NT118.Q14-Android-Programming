@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Theme chính của ứng dụng -->
+    <style name="Theme.PersonalTaskManager" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- Không dùng dark mode -->
+        <item name="android:forceDarkAllowed">false</item>
+
+        <!-- Status bar sáng, icon tối -->
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Màu nền app -->
+        <item name="android:colorBackground">@color/white</item>
+
+        <!-- Button style tùy chỉnh -->
+        <item name="materialButtonStyle">@style/Widget.Personal.Button</item>
+
+    </style>
+
+    <!-- Style cho nút custom -->
+    <style name="Widget.Personal.Button" parent="Widget.MaterialComponents.Button">
+        <!-- Bỏ tint của Material -->
+        <item name="backgroundTint">@null</item>
+        <item name="android:background">@drawable/bg_task02_button</item>
+        <item name="rippleColor">@android:color/transparent</item>
+    </style>
+
+</resources>

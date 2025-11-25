@@ -1,0 +1,1 @@
+package com.example.lab04_storage.ui.settings; public class SettingsActivity {}

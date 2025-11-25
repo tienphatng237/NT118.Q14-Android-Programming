@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutMain"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Nút Start Setting -->
+    <Button
+        android:id="@+id/btnStartSetting"
+        android:text="Start My Setting"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+
+        android:background="@drawable/bg_task02_button"
+        android:backgroundTint="@null"
+        android:stateListAnimator="@null" />
+
+    <!-- Nút Quay lại -->
+    <Button
+        android:id="@+id/btnBack"
+        android:text="Quay lại"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+
+        android:padding="12dp"
+
+        android:background="@drawable/bg_task02_button"
+        android:backgroundTint="@null"
+        android:stateListAnimator="@null" />
+
+</LinearLayout>
