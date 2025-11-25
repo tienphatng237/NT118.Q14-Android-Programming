@@ -4,28 +4,29 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class Task02Prefs {
+    private static final String PREF = "task02_prefs";
+    private static final String KEY_COLOR_RED = "color_red";
+    private static final String KEY_INFO_CHECKED = "info_checked";
 
-    private final SharedPreferences prefs;
+    private final SharedPreferences sp;
 
-    public Task02Prefs(Context context) {
-        prefs = context.getSharedPreferences("task02_prefs", Context.MODE_PRIVATE);
+    public Task02Prefs(Context ctx) {
+        sp = ctx.getSharedPreferences(PREF, Context.MODE_PRIVATE);
     }
 
-    // Setting 1
-    public void setRedBackground(boolean value) {
-        prefs.edit().putBoolean("red_bg", value).apply();
+    public boolean isColorRed() {
+        return sp.getBoolean(KEY_COLOR_RED, false);
     }
 
-    public boolean isRedBackground() {
-        return prefs.getBoolean("red_bg", false);
+    public void setColorRed(boolean value) {
+        sp.edit().putBoolean(KEY_COLOR_RED, value).apply();
     }
 
-    // Setting 2
-    public void setSpecialMode(boolean value) {
-        prefs.edit().putBoolean("special_mode", value).apply();
+    public boolean isInfoChecked() {
+        return sp.getBoolean(KEY_INFO_CHECKED, false);
     }
 
-    public boolean isSpecialMode() {
-        return prefs.getBoolean("special_mode", false);
+    public void setInfoChecked(boolean value) {
+        sp.edit().putBoolean(KEY_INFO_CHECKED, value).apply();
     }
 }

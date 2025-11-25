@@ -1,22 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="24dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
 
+    <!-- TITLE -->
     <TextView
-        android:text="Cài đặt màu nền"
+        android:text="MY PREFERENCE CATEGORY"
         android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_marginBottom="12dp"
+        android:textSize="18sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp" />
 
+    <!-- CHECKBOX 1 - đổi màu nền -->
     <CheckBox
         android:id="@+id/cbColor"
-        android:text="Màu nền đỏ (Bật = đỏ, Tắt = xanh)"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Cấu hình màu nền (checked = đỏ, unchecked = xanh)"
+        android:layout_marginBottom="24dp" />
 
+    <!-- CHECKBOX 2 - hiển thị trạng thái -->
+    <CheckBox
+        android:id="@+id/cbInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hiển thị trạng thái (checked/unchecked)"
+        android:layout_marginBottom="32dp" />
+
+    <!-- BUTTON RESULT -->
+    <Button
+        android:id="@+id/btnStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="checked = false"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:background="#9C27B0"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center_horizontal"/>
 </LinearLayout>
