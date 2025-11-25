@@ -13,12 +13,13 @@ import androidx.appcompat.app.AppCompatDelegate;
 import com.example.lab04_storage.R;
 import com.example.lab04_storage.task01.data.Task01PrefsManager;
 import com.example.lab04_storage.task01.data.Task01UserSession;
+import com.example.lab04_storage.task02.ui.main.Task02MainActivity;
 
 public class Task01ProfileActivity extends AppCompatActivity {
 
     private TextView tvUsername;
     private Switch switchTheme;
-    private Button btnExport, btnLogout;
+    private Button btnExport, btnLogout, btnSettings;
 
     private Task01PrefsManager prefs;
 
@@ -33,33 +34,35 @@ public class Task01ProfileActivity extends AppCompatActivity {
         switchTheme = findViewById(R.id.switchTheme);
         btnExport = findViewById(R.id.btnExport);
         btnLogout = findViewById(R.id.btnLogout);
+        btnSettings = findViewById(R.id.btnSettings);
 
-        // Lấy user đang đăng nhập
         Task01UserSession session = prefs.getSession();
         tvUsername.setText("Xin chào, " + session.username + "!");
 
-        // ========== DARK MODE ==========
         switchTheme.setChecked(prefs.isDarkMode());
         switchTheme.setOnCheckedChangeListener((btn, isChecked) -> {
             prefs.setDarkMode(isChecked);
-
             AppCompatDelegate.setDefaultNightMode(
                     isChecked ? AppCompatDelegate.MODE_NIGHT_YES :
-                            AppCompatDelegate.MODE_NIGHT_NO
-            );
+                            AppCompatDelegate.MODE_NIGHT_NO);
         });
 
-        // ========== EXPORT JSON ==========
         btnExport.setOnClickListener(v -> {
             String json = prefs.exportToJson();
-            Toast.makeText(this, "JSON:\n" + json, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, json, Toast.LENGTH_LONG).show();
         });
 
-        // ========== LOGOUT ==========
         btnLogout.setOnClickListener(v -> {
             prefs.clear();
             startActivity(new Intent(this, Task01LoginActivity.class));
             finishAffinity();
         });
+
+        // -------------------------------
+        // Mở SETTINGS (Task02)
+        // -------------------------------
+        btnSettings.setOnClickListener(v ->
+                startActivity(new Intent(this, Task02MainActivity.class))
+        );
     }
 }

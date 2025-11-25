@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainContainer"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#00BCD4"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Text hello user -->
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:text="Xin chào: username"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnSetting1"
+        android:text="Setting 1"
+        android:backgroundTint="#6A5ACD"
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"/>
+
+    <Button
+        android:id="@+id/btnSetting2"
+        android:text="Setting 2"
+        android:backgroundTint="#6A5ACD"
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"/>
+
+</LinearLayout>

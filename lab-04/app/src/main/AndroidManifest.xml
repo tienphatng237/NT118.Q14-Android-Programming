@@ -23,34 +23,27 @@
         <!-- Task 01 Activities    -->
         <!-- ===================== -->
 
-        <!-- Splash -->
+        <activity android:name=".task01.screens.Task01SplashActivity" android:exported="false"/>
+        <activity android:name=".task01.screens.Task01LoginActivity" android:exported="false"/>
+        <activity android:name=".task01.screens.Task01RegisterActivity" android:exported="false"/>
+        <activity android:name=".task01.screens.Task01MainActivity" android:exported="false"/>
+        <activity android:name=".task01.screens.Task01ProfileActivity" android:exported="false"/>
+        <activity android:name=".task01.screens.Task01AdminActivity" android:exported="false"/>
+
+        <!-- ===================== -->
+        <!-- Task 02 Activities    -->
+        <!-- ===================== -->
+
         <activity
-            android:name=".task01.screens.Task01SplashActivity"
+            android:name=".task02.ui.main.Task02MainActivity"
             android:exported="false" />
 
-        <!-- Login -->
         <activity
-            android:name=".task01.screens.Task01LoginActivity"
+            android:name=".task02.ui.settings.Task02SettingActivity"
             android:exported="false" />
 
-        <!-- Register -->
         <activity
-            android:name=".task01.screens.Task01RegisterActivity"
-            android:exported="false" />
-
-        <!-- Main -->
-        <activity
-            android:name=".task01.screens.Task01MainActivity"
-            android:exported="false" />
-
-        <!-- Profile -->
-        <activity
-            android:name=".task01.screens.Task01ProfileActivity"
-            android:exported="false" />
-
-        <!-- Admin Dashboard -->
-        <activity
-            android:name=".task01.screens.Task01AdminActivity"
+            android:name=".task02.ui.settings.Task02Setting2Activity"
             android:exported="false" />
 
     </application>

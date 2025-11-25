@@ -58,12 +58,10 @@ public class Task01LoginActivity extends AppCompatActivity {
 
         prefs.saveSession(u, p, true);
 
-        if (u.equals("admin")) {
-            startActivity(new Intent(this, Task01AdminActivity.class));
-        } else {
-            startActivity(new Intent(this, Task01MainActivity.class));
-        }
-
+        // --------------------------
+        // USER → vào màn Task Manager
+        // --------------------------
+        startActivity(new Intent(this, Task01MainActivity.class));
         finish();
     }
 }
