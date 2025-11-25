@@ -14,7 +14,7 @@ import com.example.lab04_storage.task02.ui.settings.Task02SettingActivity;
 public class Task02MainActivity extends AppCompatActivity {
 
     private LinearLayout layoutMain;
-    private Button btnStartSetting;
+    private Button btnStartSetting, btnBack;
 
     private Task02Prefs prefs;
 
@@ -23,14 +23,21 @@ public class Task02MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.feature_task02_main);
 
+        // ==============================
+        // Mapping UI
+        // ==============================
         prefs = new Task02Prefs(this);
-
         layoutMain = findViewById(R.id.layoutMain);
         btnStartSetting = findViewById(R.id.btnStartSetting);
+        btnBack = findViewById(R.id.btnBack);
 
+        // Mở màn hình Setting
         btnStartSetting.setOnClickListener(v ->
                 startActivity(new Intent(this, Task02SettingActivity.class))
         );
+
+        // Nút quay lại (về Task01Main hoặc Previous Activity)
+        btnBack.setOnClickListener(v -> finish());
     }
 
     @Override
@@ -41,9 +48,9 @@ public class Task02MainActivity extends AppCompatActivity {
 
     private void applyColor() {
         if (prefs.isColorRed()) {
-            layoutMain.setBackgroundColor(0xFFFF0000);
+            layoutMain.setBackgroundColor(0xFFFF0000); // đỏ
         } else {
-            layoutMain.setBackgroundColor(0xFF03A9F4);
+            layoutMain.setBackgroundColor(0xFF0969DA); // xanh lạnh theo theme
         }
     }
 }

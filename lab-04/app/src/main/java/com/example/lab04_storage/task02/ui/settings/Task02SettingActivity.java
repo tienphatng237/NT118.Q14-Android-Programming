@@ -12,7 +12,7 @@ import com.example.lab04_storage.task02.data.Task02Prefs;
 public class Task02SettingActivity extends AppCompatActivity {
 
     private CheckBox cbColor, cbInfo;
-    private Button btnStatus;
+    private Button btnStatus, btnBack;
     private Task02Prefs prefs;
 
     @Override
@@ -25,24 +25,28 @@ public class Task02SettingActivity extends AppCompatActivity {
         cbColor = findViewById(R.id.cbColor);
         cbInfo = findViewById(R.id.cbInfo);
         btnStatus = findViewById(R.id.btnStatus);
+        btnBack = findViewById(R.id.btnBack);
 
         // Load trạng thái
         cbColor.setChecked(prefs.isColorRed());
         cbInfo.setChecked(prefs.isInfoChecked());
 
-        // Hiển thị nút theo trạng thái hiện tại
+        // Hiển thị trạng thái ban đầu trên nút
         updateStatusText(cbInfo.isChecked());
 
-        // Checkbox 1 – đổi màu nền
+        // Checkbox đổi màu nền
         cbColor.setOnCheckedChangeListener((v, checked) -> {
             prefs.setColorRed(checked);
         });
 
-        // Checkbox 2 – hiển thị trạng thái
+        // Checkbox hiển thị trạng thái
         cbInfo.setOnCheckedChangeListener((v, checked) -> {
             prefs.setInfoChecked(checked);
             updateStatusText(checked);
         });
+
+        // Nút quay lại
+        btnBack.setOnClickListener(v -> finish());
     }
 
     private void updateStatusText(boolean checked) {

@@ -1,46 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp">
+    android:background="@color/backgroundColor"
+    android:padding="45dp"
+    android:paddingTop="96dp">
 
-    <!-- TITLE -->
-    <TextView
-        android:text="MY PREFERENCE CATEGORY"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp" />
+        android:orientation="vertical">
 
-    <!-- CHECKBOX 1 - đổi màu nền -->
-    <CheckBox
-        android:id="@+id/cbColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cấu hình màu nền (checked = đỏ, unchecked = xanh)"
-        android:layout_marginBottom="24dp" />
+        <TextView
+            android:text="MY PREFERENCE CATEGORY"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/textPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp" />
 
-    <!-- CHECKBOX 2 - hiển thị trạng thái -->
-    <CheckBox
-        android:id="@+id/cbInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hiển thị trạng thái (checked/unchecked)"
-        android:layout_marginBottom="32dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_task02_card">
 
-    <!-- BUTTON RESULT -->
-    <Button
-        android:id="@+id/btnStatus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="checked = false"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="12dp"
-        android:background="#9C27B0"
-        android:textColor="#FFFFFF"
-        android:layout_gravity="center_horizontal"/>
-</LinearLayout>
+            <TextView
+                android:text="Cấu hình màu nền"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/textPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:id="@+id/cbColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Checked = đỏ | Unchecked = xanh"
+                android:textColor="@color/textSecondary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/bg_task02_card">
+
+            <TextView
+                android:text="Hiển thị trạng thái"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/textPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:id="@+id/cbInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Checked = true | Unchecked = false"
+                android:textColor="@color/textSecondary" />
+        </LinearLayout>
+
+        <!-- BUTTON STATUS -->
+        <Button
+            android:id="@+id/btnStatus"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:text="checked = false"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_task02_button_round"
+            android:backgroundTint="@null"
+            android:layout_marginBottom="16dp"
+            android:layout_gravity="center_horizontal"
+            android:stateListAnimator="@null" />
+
+        <!-- BUTTON BACK -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:text="← Quay lại"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_task02_button_round"
+            android:backgroundTint="@null"
+            android:layout_gravity="center_horizontal"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+</ScrollView>
