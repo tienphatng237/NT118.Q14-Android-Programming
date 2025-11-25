@@ -1,5 +1,6 @@
 package com.example.lab04_storage.task01.screens;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -30,6 +31,9 @@ public class Task01AdminActivity extends AppCompatActivity {
         listUsers = findViewById(R.id.listUsers);
         btnLogout = findViewById(R.id.btnLogoutAdmin);
 
+        // ============================
+        // LOAD LIST USERS
+        // ============================
         ArrayList<Task01UserSession> list = prefs.getAllUsers();
         ArrayList<String> names = new ArrayList<>();
 
@@ -43,8 +47,21 @@ public class Task01AdminActivity extends AppCompatActivity {
                 names
         ));
 
+        // ============================
+        // LOGOUT — chuẩn không crash
+        // ============================
         btnLogout.setOnClickListener(v -> {
+
+            // Xóa phiên đăng nhập hiện tại
             prefs.saveSession("", "", false);
+
+            // Chuyển về Login
+            Intent i = new Intent(Task01AdminActivity.this, Task01LoginActivity.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+
+            startActivity(i);
+
+            // Chỉ finish() là đủ (KHÔNG dùng finishAffinity)
             finish();
         });
     }

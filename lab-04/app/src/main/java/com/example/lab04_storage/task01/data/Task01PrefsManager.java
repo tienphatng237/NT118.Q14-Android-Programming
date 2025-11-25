@@ -33,12 +33,14 @@ public class Task01PrefsManager {
     // QUẢN LÝ DANH SÁCH USER (JSON)
     // ==============================
 
+    /** Tạo admin mặc định nếu chưa tồn tại */
     private void ensureDefaultAdmin() {
         if (!userExists("admin")) {
             addUser("admin", "admin", "admin@gmail.com");
         }
     }
 
+    /** Kiểm tra username đã tồn tại chưa */
     public boolean userExists(String username) {
         ArrayList<Task01UserSession> users = getAllUsers();
         for (Task01UserSession u : users) {
@@ -47,9 +49,17 @@ public class Task01PrefsManager {
         return false;
     }
 
+    /** Thêm user mới */
     public void addUser(String username, String password, String email) {
         try {
             JSONArray arr = new JSONArray(prefs.getString("users", "[]"));
+
+            // Không thêm trùng
+            for (int i = 0; i < arr.length(); i++) {
+                if (arr.getJSONObject(i).getString("username").equals(username)) {
+                    return; // đã tồn tại -> bỏ qua
+                }
+            }
 
             JSONObject obj = new JSONObject();
             obj.put("username", username);
@@ -65,6 +75,7 @@ public class Task01PrefsManager {
         }
     }
 
+    /** Xác thực đăng nhập */
     public boolean validateLogin(String username, String password) {
         ArrayList<Task01UserSession> users = getAllUsers();
         for (Task01UserSession u : users) {
@@ -75,6 +86,7 @@ public class Task01PrefsManager {
         return false;
     }
 
+    /** Lấy danh sách toàn bộ user */
     public ArrayList<Task01UserSession> getAllUsers() {
         ArrayList<Task01UserSession> list = new ArrayList<>();
 
@@ -137,6 +149,6 @@ public class Task01PrefsManager {
     /** Xoá sạch dữ liệu */
     public void clear() {
         prefs.edit().clear().apply();
-        ensureDefaultAdmin();
+        ensureDefaultAdmin(); // luôn tạo lại admin
     }
 }
