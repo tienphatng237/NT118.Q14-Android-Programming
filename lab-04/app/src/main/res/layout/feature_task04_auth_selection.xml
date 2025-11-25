@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@color/colorBackground"
+    tools:context=".task04.screens.Task04AuthSelectionActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHỌN PHƯƠNG THỨC ĐĂNG NHẬP"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_auth_task1_prefs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. TASK 1: Shared Preferences"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorOnPrimary"
+        android:padding="16dp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btn_auth_task4_sqlite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. TASK 4: SQLite (Mã hóa MD5)"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/colorOnPrimary"
+        android:padding="16dp"/>
+</LinearLayout>

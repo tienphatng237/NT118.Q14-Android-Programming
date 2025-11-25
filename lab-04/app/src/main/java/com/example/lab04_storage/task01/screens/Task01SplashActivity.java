@@ -8,11 +8,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.lab04_storage.R;
 import com.example.lab04_storage.task01.data.Task01PrefsManager;
+// Import Activity Menu Auth MỚI
+import com.example.lab04_storage.task04.screens.Task04AuthSelectionActivity;
 
 /**
  * Màn hình Splash (giả lập loading 1-2 giây).
- * Nếu remember = true → đi thẳng vào Main.
- * Nếu không → vào Login.
+ * Đã sửa: Luôn dẫn đến Menu chọn Auth (Prefs hoặc SQLite).
  */
 public class Task01SplashActivity extends AppCompatActivity {
 
@@ -21,15 +22,13 @@ public class Task01SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.feature_auth_splash);
 
-        Task01PrefsManager prefs = new Task01PrefsManager(this);
-        boolean remember = prefs.getSession().remember;
+        // Bỏ kiểm tra 'remember' cũ. Luôn dẫn đến Menu Auth.
+        // Task01PrefsManager prefs = new Task01PrefsManager(this);
+        // boolean remember = prefs.getSession().remember;
 
         new Handler().postDelayed(() -> {
-            if (remember) {
-                startActivity(new Intent(this, Task01MainActivity.class));
-            } else {
-                startActivity(new Intent(this, Task01LoginActivity.class));
-            }
+            // Điều hướng sang Menu chọn Auth (Task 4)
+            startActivity(new Intent(this, Task04AuthSelectionActivity.class));
             finish();
         }, 1200);
     }

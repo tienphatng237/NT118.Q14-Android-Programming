@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:label="Lab 04 Storage"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/Theme.PersonalTaskManager">
 
-        <!-- ENTRY POINT -->
         <activity
             android:name=".ui.main.MainActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
-        <!-- ===================== -->
-        <!-- Task 01 Activities    -->
-        <!-- ===================== -->
 
         <activity android:name=".task01.screens.Task01SplashActivity" android:exported="false"/>
         <activity android:name=".task01.screens.Task01LoginActivity" android:exported="false"/>
@@ -30,21 +25,19 @@
         <activity android:name=".task01.screens.Task01ProfileActivity" android:exported="false"/>
         <activity android:name=".task01.screens.Task01AdminActivity" android:exported="false"/>
 
-        <!-- ===================== -->
-        <!-- Task 02 Activities    -->
-        <!-- ===================== -->
+        <activity android:name=".task02.ui.main.Task02MainActivity" android:exported="false" />
+        <activity android:name=".task02.ui.settings.Task02SettingActivity" android:exported="false" />
+        <activity android:name=".task02.ui.settings.Task02Setting2Activity" android:exported="false" />
 
-        <activity
-            android:name=".task02.ui.main.Task02MainActivity"
-            android:exported="false" />
+        <activity android:name=".task03.screens.Task03StorageSelectionActivity" />
+        <activity android:name=".task03.screens.Task03InternalStorageActivity" />
+        <activity android:name=".task03.screens.Task03ExternalStorageActivity" />
 
-        <activity
-            android:name=".task02.ui.settings.Task02SettingActivity"
-            android:exported="false" />
+        <activity android:name=".task04.screens.Task04ClassManagerActivity" />
 
-        <activity
-            android:name=".task02.ui.settings.Task02Setting2Activity"
-            android:exported="false" />
+        <activity android:name=".task04.screens.Task04AuthSelectionActivity" android:exported="false"/>
+        <activity android:name=".task04.screens.Task04SqliteLoginActivity" android:exported="false"/>
+        <activity android:name=".task04.screens.Task04SqliteRegisterActivity" android:exported="false"/>
 
     </application>
 
