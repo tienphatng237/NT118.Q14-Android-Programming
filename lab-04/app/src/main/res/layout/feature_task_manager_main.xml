@@ -10,7 +10,7 @@
     android:background="#FFFFFF"
     tools:context=".features.task_manager.screens.TaskManagerMainActivity">
 
-
+    <!-- SEARCH CARD -->
     <androidx.cardview.widget.CardView
         android:id="@+id/card_search"
         android:layout_width="0dp"
@@ -25,16 +25,16 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <ImageView
                 android:id="@+id/iv_search_icon"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginStart="16dp"
                 android:src="@android:drawable/ic_menu_search"
-                android:contentDescription="Search"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent" />
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
             <TextView
                 android:id="@+id/tv_search_hint"
@@ -42,8 +42,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Tìm kiếm..."
-                android:textColor="#88000000"
                 android:textSize="14sp"
+                android:textColor="#88000000"
                 app:layout_constraintStart_toEndOf="@id/iv_search_icon"
                 app:layout_constraintEnd_toStartOf="@id/btn_add_small"
                 app:layout_constraintTop_toTopOf="parent"
@@ -54,9 +54,9 @@
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginEnd="12dp"
                 android:text="+"
                 android:textSize="20sp"
+                android:layout_marginEnd="12dp"
                 android:contentDescription="Add"
                 app:cornerRadius="24dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -65,6 +65,22 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
+
+    <!-- FRAME CONTAINER CHO TASK 3 -->
+    <FrameLayout
+        android:id="@+id/task03_fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/card_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+        />
+
+
+    <!-- RECYCLERVIEW CHÍNH -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_tasks"
         android:layout_width="0dp"
@@ -77,6 +93,7 @@
         tools:listitem="@android:layout/simple_list_item_1" />
 
 
+    <!-- BOTTOM NAVIGATION -->
     <LinearLayout
         android:id="@+id/bottom_nav"
         android:layout_width="0dp"
@@ -88,6 +105,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
+        <!-- HOME -->
         <LinearLayout
             android:id="@+id/nav_home"
             android:layout_width="0dp"
@@ -95,10 +113,12 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center">
+
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@android:drawable/ic_menu_view" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -106,6 +126,7 @@
                 android:textSize="12sp"/>
         </LinearLayout>
 
+        <!-- TASKS -->
         <LinearLayout
             android:id="@+id/nav_tasks"
             android:layout_width="0dp"
@@ -113,10 +134,12 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center">
+
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@android:drawable/ic_menu_agenda" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -124,6 +147,7 @@
                 android:textSize="12sp"/>
         </LinearLayout>
 
+        <!-- NOTE -->
         <LinearLayout
             android:id="@+id/nav_note_task3"
             android:layout_width="0dp"
@@ -131,11 +155,12 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center">
+
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@android:drawable/ic_menu_edit"
-                android:contentDescription="Note/Storage" />
+                android:src="@android:drawable/ic_menu_edit"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -143,6 +168,7 @@
                 android:textSize="12sp"/>
         </LinearLayout>
 
+        <!-- TABLE -->
         <LinearLayout
             android:id="@+id/nav_db_task4"
             android:layout_width="0dp"
@@ -150,11 +176,12 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center">
+
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@android:drawable/ic_menu_mapmode"
-                android:contentDescription="Table" />
+                android:src="@android:drawable/ic_menu_mapmode"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -162,6 +189,7 @@
                 android:textSize="12sp"/>
         </LinearLayout>
 
+        <!-- PROFILE -->
         <LinearLayout
             android:id="@+id/nav_profile"
             android:layout_width="0dp"
@@ -169,30 +197,33 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center">
+
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@android:drawable/ic_menu_myplaces" />
+                android:src="@android:drawable/ic_menu_myplaces"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Profile"
                 android:textSize="12sp"/>
         </LinearLayout>
+
     </LinearLayout>
 
 
+    <!-- FLOATING BUTTON -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add_task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="72dp"
-        android:contentDescription="Add Task"
         app:srcCompat="@android:drawable/ic_input_add"
-        app:tint="@android:color/white"
         app:backgroundTint="@color/colorPrimary"
+        app:tint="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
