@@ -8,7 +8,7 @@
     android:padding="16dp"
     android:background="@color/colorBackground"
     android:fitsSystemWindows="true"
-    tools:context=".task03.screens.Task03ExternalStorageActivity">
+    tools:context=".task03.ui.external.Task03ExternalStorageFragment">
 
     <TextView
         android:id="@+id/tv_external_title"

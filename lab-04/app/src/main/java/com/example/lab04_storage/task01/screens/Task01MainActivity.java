@@ -13,7 +13,7 @@ import com.example.lab04_storage.task01.data.Task01UserSession;
 import com.google.android.material.button.MaterialButton;
 
 // DÒNG IMPORT CHO TASK 3
-import com.example.lab04_storage.task03.screens.Task03StorageSelectionActivity;
+import com.example.lab04_storage.task03.ui.selection.Task03StorageSelectionFragment;
 // DÒNG IMPORT CHO TASK 4 (SQLite)
 import com.example.lab04_storage.task04.screens.Task04ClassManagerActivity;
 
@@ -88,7 +88,7 @@ public class Task01MainActivity extends AppCompatActivity {
 
         // LOGIC MỚI: Note/Storage (Điều hướng đến Menu lựa chọn Storage)
         navNoteTask3.setOnClickListener(v -> {
-            startActivity(new Intent(this, Task03StorageSelectionActivity.class));
+            startActivity(new Intent(this, Task03StorageSelectionFragment.class));
         });
 
         // LOGIC MỚI: Database/Bảng (Điều hướng đến Task 4)

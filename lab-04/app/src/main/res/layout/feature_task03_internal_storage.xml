@@ -8,7 +8,7 @@
     android:padding="16dp"
     android:background="@color/colorBackground"
     android:fitsSystemWindows="true"
-    tools:context=".task03.screens.Task03InternalStorageActivity">
+    tools:context=".task03.ui.internal.Task03InternalStorageFragment">
 
     <TextView
         android:id="@+id/tv_internal_title"

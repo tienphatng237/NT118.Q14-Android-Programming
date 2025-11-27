@@ -8,7 +8,7 @@
     android:gravity="center"
     android:padding="32dp"
     android:background="@color/colorBackground"
-    tools:context=".task03.screens.Task03StorageSelectionActivity">
+    tools:context=".task03.ui.selection.Task03StorageSelectionFragment">
 
     <TextView
         android:layout_width="wrap_content"

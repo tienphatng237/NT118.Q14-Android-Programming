@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/Theme.PersonalTaskManager">
 
+        <!-- MÀN HÌNH KHỞI ĐỘNG ĐÚNG -->
         <activity
-            android:name=".ui.main.MainActivity"
+            android:name=".task01.screens.Task01SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,23 +19,23 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".task01.screens.Task01SplashActivity" android:exported="false"/>
+        <!-- TASK 01 -->
         <activity android:name=".task01.screens.Task01LoginActivity" android:exported="false"/>
         <activity android:name=".task01.screens.Task01RegisterActivity" android:exported="false"/>
         <activity android:name=".task01.screens.Task01MainActivity" android:exported="false"/>
         <activity android:name=".task01.screens.Task01ProfileActivity" android:exported="false"/>
         <activity android:name=".task01.screens.Task01AdminActivity" android:exported="false"/>
 
+        <!-- TASK 02 -->
         <activity android:name=".task02.ui.main.Task02MainActivity" android:exported="false" />
         <activity android:name=".task02.ui.settings.Task02SettingActivity" android:exported="false" />
         <activity android:name=".task02.ui.settings.Task02Setting2Activity" android:exported="false" />
 
-        <activity android:name=".task03.screens.Task03StorageSelectionActivity" />
-        <activity android:name=".task03.screens.Task03InternalStorageActivity" />
-        <activity android:name=".task03.screens.Task03ExternalStorageActivity" />
+        <!-- TASK 03 -->
+        <activity android:name=".task03.ui.Task03ContainerActivity" android:exported="false" />
 
-        <activity android:name=".task04.screens.Task04ClassManagerActivity" />
-
+        <!-- TASK 04 -->
+        <activity android:name=".task04.screens.Task04ClassManagerActivity" android:exported="false"/>
         <activity android:name=".task04.screens.Task04AuthSelectionActivity" android:exported="false"/>
         <activity android:name=".task04.screens.Task04SqliteLoginActivity" android:exported="false"/>
         <activity android:name=".task04.screens.Task04SqliteRegisterActivity" android:exported="false"/>
