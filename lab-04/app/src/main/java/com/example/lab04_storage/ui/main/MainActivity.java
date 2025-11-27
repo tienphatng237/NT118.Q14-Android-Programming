@@ -2,20 +2,20 @@ package com.example.lab04_storage.ui.main;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.example.lab04_storage.R;
 import com.example.lab04_storage.task01.data.Task01PrefsManager;
 import com.example.lab04_storage.task01.data.Task01UserSession;
 import com.example.lab04_storage.task01.screens.Task01ProfileActivity;
-
 import com.example.lab04_storage.task02.ui.main.Task02MainActivity;
-
 import com.example.lab04_storage.task03.ui.Task03ContainerActivity;
-
+import com.example.lab04_storage.task04.screens.Task04ClassManagerFragment;
 import com.google.android.material.button.MaterialButton;
 
 /**
@@ -81,11 +81,31 @@ public class MainActivity extends AppCompatActivity {
         });
 
         navDbTask4.setOnClickListener(v -> {
-            startActivity(new Intent(this, Task04ClassManagerActivity.class));
+            loadTask04Fragment(new Task04ClassManagerFragment());
         });
 
         navProfile.setOnClickListener(v -> {
             startActivity(new Intent(this, Task01ProfileActivity.class));
         });
+    }
+
+    /**
+     * Load Fragment Task04 vào vùng container chung
+     */
+    private void loadTask04Fragment(Fragment fragment) {
+
+        // Ẩn recycler chính
+        View rv = findViewById(R.id.rv_tasks);
+        if (rv != null) rv.setVisibility(View.GONE);
+
+        // Hiện vùng fragment
+        View container = findViewById(R.id.task03_fragment_container);
+        if (container != null) container.setVisibility(View.VISIBLE);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.task03_fragment_container, fragment)
+                .addToBackStack(null)
+                .commit();
     }
 }

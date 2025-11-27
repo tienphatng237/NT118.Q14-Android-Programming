@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import com.example.lab04_storage.R;
 import com.example.lab04_storage.task01.data.Task01PrefsManager;
 import com.example.lab04_storage.task01.data.Task01UserSession;
+import com.example.lab04_storage.task01.screens.Task01ProfileFragment;
 import com.example.lab04_storage.task03.ui.selection.Task03StorageSelectionFragment;
 import com.example.lab04_storage.task04.screens.Task04ClassManagerFragment;
 import com.google.android.material.button.MaterialButton;
@@ -59,7 +60,7 @@ public class Task01MainActivity extends AppCompatActivity {
         navTasks.setOnClickListener(v -> {});
 
         navProfile.setOnClickListener(v ->
-                startActivity(new Intent(this, Task01ProfileActivity.class))
+                loadTask01ProfileFragment(new Task01ProfileFragment())
         );
 
         // ============================
@@ -75,6 +76,21 @@ public class Task01MainActivity extends AppCompatActivity {
         navDbTask4.setOnClickListener(v ->
                 loadTask04Fragment(new Task04ClassManagerFragment())
         );
+    }
+
+    private void loadTask01ProfileFragment(Fragment fragment) {
+
+        View rv = findViewById(R.id.rv_tasks);
+        if (rv != null) rv.setVisibility(View.GONE);
+
+        View container = findViewById(R.id.task03_fragment_container);
+        if (container != null) container.setVisibility(View.VISIBLE);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.task03_fragment_container, fragment)
+                .addToBackStack(null)
+                .commit();
     }
 
     private void loadTask03Fragment(Fragment fragment) {
