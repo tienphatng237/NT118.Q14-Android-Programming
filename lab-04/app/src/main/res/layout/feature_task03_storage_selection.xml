@@ -6,37 +6,46 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="32dp"
-    android:background="@color/colorBackground"
+    android:paddingStart="40dp"
+    android:paddingEnd="40dp"
+    android:background="@android:color/white"
     tools:context=".task03.ui.selection.Task03StorageSelectionFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CHỌN PHƯƠNG THỨC LƯU TRỮ (TASK 3)"
-        android:textSize="20sp"
+        android:text="CHỌN PHƯƠNG THỨC LƯU TRỮ"
+        android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_marginBottom="40dp"
+        android:textColor="#212121"
+        android:layout_marginBottom="90dp"
         android:gravity="center"/>
 
     <Button
         android:id="@+id/btn_select_internal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="1. INTERNAL STORAGE (Nội bộ)"
-        android:backgroundTint="@color/colorPrimary"
-        android:textColor="@color/colorOnPrimary"
-        android:padding="16dp"
-        android:layout_marginBottom="20dp"/>
+        android:text="1. INTERNAL STORAGE\n(NỘI BỘ)"
+        android:backgroundTint="#03A9F4"
+        android:textColor="@android:color/white"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        tools:targetApi="m" />
 
     <Button
         android:id="@+id/btn_select_external"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2. EXTERNAL STORAGE (Bộ nhớ ngoài)"
-        android:backgroundTint="@color/colorPrimary"
-        android:textColor="@color/colorOnPrimary"
-        android:padding="16dp"/>
+        android:text="2. EXTERNAL STORAGE\n(BỘ NHỚ NGOÀI)"
+        android:backgroundTint="#03A9F4"
+        android:textColor="@android:color/white"
+        android:paddingTop="18dp"
+        android:paddingBottom="18dp"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        tools:targetApi="m"/>
 
 </LinearLayout>

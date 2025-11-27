@@ -13,7 +13,7 @@ import com.example.lab04_storage.R;
 import com.example.lab04_storage.task01.data.Task01PrefsManager;
 import com.example.lab04_storage.task01.data.Task01UserSession;
 import com.example.lab04_storage.task03.ui.selection.Task03StorageSelectionFragment;
-import com.example.lab04_storage.task04.screens.Task04ClassManagerActivity;
+import com.example.lab04_storage.task04.screens.Task04ClassManagerFragment;
 import com.google.android.material.button.MaterialButton;
 
 public class Task01MainActivity extends AppCompatActivity {
@@ -73,7 +73,7 @@ public class Task01MainActivity extends AppCompatActivity {
         // TASK 4 — SQLITE TABLE
         // ============================
         navDbTask4.setOnClickListener(v ->
-                startActivity(new Intent(this, Task04ClassManagerActivity.class))
+                loadTask04Fragment(new Task04ClassManagerFragment())
         );
     }
 
@@ -93,4 +93,22 @@ public class Task01MainActivity extends AppCompatActivity {
                 .addToBackStack(null)
                 .commit();
     }
+
+    private void loadTask04Fragment(Fragment fragment) {
+
+        // Ẩn recycler
+        View rv = findViewById(R.id.rv_tasks);
+        if (rv != null) rv.setVisibility(View.GONE);
+
+        // Hiện container
+        View container = findViewById(R.id.task03_fragment_container);
+        if (container != null) container.setVisibility(View.VISIBLE);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.task03_fragment_container, fragment)
+                .addToBackStack(null)
+                .commit();
+    }
+
 }
