@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.TextView; // Vẫn giữ import nếu dùng TextView ở nơi khác
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -16,7 +16,7 @@ import com.example.lab04_storage.task01.screens.Task01ProfileActivity;
 import com.example.lab04_storage.task02.ui.main.Task02MainActivity;
 import com.example.lab04_storage.task03.ui.Task03ContainerActivity;
 import com.example.lab04_storage.task04.screens.Task04ClassManagerFragment;
-import com.google.android.material.button.MaterialButton;
+// Đã xóa import: import com.google.android.material.button.MaterialButton;
 
 /**
  * MainActivity – Màn hình điều hướng chung cho cả 4 bài
@@ -25,7 +25,7 @@ import com.google.android.material.button.MaterialButton;
  */
 public class MainActivity extends AppCompatActivity {
 
-    private TextView tvSearchHint;
+    // Đã xóa: private TextView tvSearchHint;
     private Task01PrefsManager prefs;
 
     @Override
@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
         prefs = new Task01PrefsManager(this);
         Task01UserSession session = prefs.getSession();
 
-        tvSearchHint = findViewById(R.id.tv_search_hint);
-        MaterialButton btnAdd = findViewById(R.id.btn_add_small);
+        // Đã xóa: tvSearchHint = findViewById(R.id.tv_search_hint);
+        // Đã xóa: MaterialButton btnAdd = findViewById(R.id.btn_add_small);
 
         LinearLayout navHome = findViewById(R.id.nav_home);
         LinearLayout navTasks = findViewById(R.id.nav_tasks);
@@ -49,20 +49,24 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout navProfile = findViewById(R.id.nav_profile);
 
         // ==========================
-        // Set Username
+        // Set Username (Đã xóa logic hiển thị lên search bar)
         // ==========================
+        /*
         if (session != null && session.username != null) {
             tvSearchHint.setText("Xin chào: " + session.username);
         } else {
             tvSearchHint.setText("Xin chào: User");
         }
+        */
 
         // ==========================
-        // Buttons
+        // Buttons (Đã xóa btnAdd)
         // ==========================
+        /*
         btnAdd.setOnClickListener(v -> {
             // Không xử lý logout tại đây nữa
         });
+        */
 
         // ==========================
         // Điều hướng

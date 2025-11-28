@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.TextView; // Vẫn giữ TextView nếu nó được sử dụng ở nơi khác, nhưng tvSearchHint đã bị xóa
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -15,20 +15,21 @@ import com.example.lab04_storage.task01.data.Task01UserSession;
 import com.example.lab04_storage.task01.screens.Task01ProfileFragment;
 import com.example.lab04_storage.task03.ui.selection.Task03StorageSelectionFragment;
 import com.example.lab04_storage.task04.screens.Task04ClassManagerFragment;
-import com.google.android.material.button.MaterialButton;
+// import com.google.android.material.button.MaterialButton; // Không cần thiết nữa nếu btnAdd bị xóa
 
 public class Task01MainActivity extends AppCompatActivity {
 
-    private TextView tvSearchHint;
+    // Đã xóa: private TextView tvSearchHint;
     private Task01PrefsManager prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Lưu ý: Layout XML (feature_task_manager_main) phải là phiên bản đã xóa search bar
         setContentView(R.layout.feature_task_manager_main);
 
         // ============================
-        // LOAD SESSION
+        // LOAD SESSION (Vẫn giữ để lấy session, nhưng không dùng để hiển thị lên search bar)
         // ============================
         prefs = new Task01PrefsManager(this);
         Task01UserSession session = prefs.getSession();
@@ -36,8 +37,8 @@ public class Task01MainActivity extends AppCompatActivity {
         // ============================
         // UI MAPPING
         // ============================
-        tvSearchHint = findViewById(R.id.tv_search_hint);
-        MaterialButton btnAdd = findViewById(R.id.btn_add_small);
+        // Đã xóa: tvSearchHint = findViewById(R.id.tv_search_hint);
+        // Đã xóa: MaterialButton btnAdd = findViewById(R.id.btn_add_small);
 
         LinearLayout navHome = findViewById(R.id.nav_home);
         LinearLayout navTasks = findViewById(R.id.nav_tasks);
@@ -46,15 +47,17 @@ public class Task01MainActivity extends AppCompatActivity {
         LinearLayout navDbTask4 = findViewById(R.id.nav_db_task4);
 
         // ============================
-        // DISPLAY USERNAME
+        // DISPLAY USERNAME (Đã xóa logic này vì không còn tvSearchHint)
         // ============================
+        /*
         if (session != null && session.username != null) {
             tvSearchHint.setText("Xin chào: " + session.username);
         } else {
             tvSearchHint.setText("Xin chào: User");
         }
+        */
 
-        btnAdd.setOnClickListener(v -> {});
+        // Đã xóa: btnAdd.setOnClickListener(v -> {});
 
         navHome.setOnClickListener(v -> {});
         navTasks.setOnClickListener(v -> {});
