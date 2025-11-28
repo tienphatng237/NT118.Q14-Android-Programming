@@ -24,10 +24,6 @@ public class Task01ProfileFragment extends Fragment {
 
     private Task01PrefsManager prefs;
 
-    public Task01ProfileFragment() {
-        // Required empty public constructor
-    }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -38,10 +34,7 @@ public class Task01ProfileFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view,
-                              @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         prefs = new Task01PrefsManager(requireContext());
 
         TextView tvUsername = view.findViewById(R.id.tvUsername);
@@ -51,10 +44,8 @@ public class Task01ProfileFragment extends Fragment {
         Button btnSettings = view.findViewById(R.id.btnSettings);
 
         Task01UserSession session = prefs.getSession();
-
         tvUsername.setText("Xin chào, " + session.username + "!");
 
-        // DARK MODE
         switchTheme.setChecked(prefs.isDarkMode());
         switchTheme.setOnCheckedChangeListener((btn, isChecked) -> {
             prefs.setDarkMode(isChecked);
@@ -63,20 +54,17 @@ public class Task01ProfileFragment extends Fragment {
                             AppCompatDelegate.MODE_NIGHT_NO);
         });
 
-        // EXPORT JSON
         btnExport.setOnClickListener(v -> {
             String json = prefs.exportToJson();
             Toast.makeText(requireContext(), json, Toast.LENGTH_LONG).show();
         });
 
-        // LOGOUT
         btnLogout.setOnClickListener(v -> {
             prefs.clear();
             startActivity(new Intent(requireContext(), Task01LoginActivity.class));
             requireActivity().finishAffinity();
         });
 
-        // SETTINGS (TASK 2)
         btnSettings.setOnClickListener(v ->
                 startActivity(new Intent(requireContext(), Task02MainActivity.class))
         );

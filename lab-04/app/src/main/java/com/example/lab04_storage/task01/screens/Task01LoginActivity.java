@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.lab04_storage.R;
 import com.example.lab04_storage.task01.data.Task01PrefsManager;
+import com.example.lab04_storage.ui.main.MainActivity;
 
 public class Task01LoginActivity extends AppCompatActivity {
 
@@ -58,10 +59,11 @@ public class Task01LoginActivity extends AppCompatActivity {
 
         prefs.saveSession(u, p, true);
 
-        // --------------------------
-        // USER → vào màn Task Manager
-        // --------------------------
-        startActivity(new Intent(this, Task01MainActivity.class));
+        // ---------------------------------
+        // FIX: Sau khi login → vào MainActivity MỚI
+        // ---------------------------------
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
         finish();
     }
 }
